@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "build/a.out",
+      "key": "sha256:c95b18fc7391ef272a5ad1257d280519bc759bba8c864194188797cd9c9e8b61",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/a.in",
+          "fingerprint": "sha256:6c0feaddaae051f969f60a4b0d53a167b4a68e4b45e76f64064a83c1fbd86507",
+          "size": 27
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/a.out",
+          "fingerprint": "sha256:977ffc1bbd711294c7216ac68b863e46f52233f1bea7f65d27c00316e4c1366a",
+          "size": 30
+        }
+      ]
+    },
+    {
+      "target": "build/b.out",
+      "key": "sha256:f264024f76c15066ec17fec1c06e3b7bb9774db89bbe8076669839f32b4f4b2c",
+      "tool": "link",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/a.out",
+          "output_fingerprint": "sha256:0f4d50f8c3bf4d9abaaca401340f1d0ccccb0dd8a432e7f66b1415450b134f6d"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/b.out",
+          "fingerprint": "sha256:407cf52e57fda10f3f98fd075fb6b71deeffffdd33f75efa6b8259e9453994a1",
+          "size": 30
+        }
+      ]
+    },
+    {
+      "target": "legacy/old.out",
+      "key": "sha256:326708f75718e65f8af0b59c422620c4859b89287b69aa9c64dff752b61fcfce",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/old.in",
+          "fingerprint": "sha256:4a41ba2440ff57ca77e5d9d644e45a3f3d903d78ca1c39051ed3575d29df767a",
+          "size": 29
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "legacy/old.out",
+          "fingerprint": "sha256:d8052c8b87b3217e60d60e700289f59f93ada8bd3a3d47dd5af11dd4bc1f23af",
+          "size": 33
+        }
+      ]
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "gen/page.html",
+      "key": "sha256:34f618816ba40f3714a5ff96bab25983142e7dcbe455ca5f201c60700a6de842",
+      "tool": "render",
+      "args": [
+        "--out=gen"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "gen/theme.css",
+          "output_fingerprint": "sha256:a96e2a57cfd07d201f4d0eddf2086aa8fe701bb18533d4df2df6c6ab4b3c643b"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "gen/page.html",
+          "fingerprint": "sha256:28855b04f8c1de68cfb0d6621a8df960633d627c3a980c858c8183c997ad585a",
+          "size": 32
+        }
+      ]
+    },
+    {
+      "target": "gen/theme.css",
+      "key": "sha256:919964df8cae0418ed99a163491d65c5ce06f921be74ffa5dd08a248aa86a32a",
+      "tool": "sass",
+      "args": [
+        "--style=min"
+      ],
+      "inputs": [
+        {
+          "path": "src/theme.css",
+          "fingerprint": "sha256:2f1ec95b3b330bc5555d759294c78c99b49a9efaf2b8b8f93016014f2fff7998",
+          "size": 32
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "gen/theme.css",
+          "fingerprint": "sha256:cbe2708841ee13bd5e0c09f283dc36bd9b5c57411f8c240f664592a9142944fd",
+          "size": 32
+        }
+      ]
+    },
+    {
+      "target": "pkg/bundle",
+      "key": "sha256:21eb9fff0bc039c217813c18f8f886a746ff7fc2b125e80a2efb63ae1beefca2",
+      "tool": "pack",
+      "args": [
+        "--mode=site"
+      ],
+      "inputs": [
+        {
+          "path": "src/pages/a.html",
+          "fingerprint": "sha256:bea07b45d84b6d885730729b71aae9cf348d925436daba21482b7a972bf41134",
+          "size": 35
+        },
+        {
+          "path": "src/pages/b.html",
+          "fingerprint": "sha256:2a25437b2c669328b4a4933b38df17df79b73c1dccf7b6d0bf24016d4fdc921c",
+          "size": 35
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "pkg/bundle.a.html",
+          "fingerprint": "sha256:605a3bb4d786cae4fa83ceaf722b56b50b5a63bb7c7b51d412053c96ddbceecb",
+          "size": 36
+        },
+        {
+          "path": "pkg/bundle.b.html",
+          "fingerprint": "sha256:8c123a2bc4d209e6287b31e27b92d92e5d83758d59d27e0f3611c16f26c35bed",
+          "size": 36
+        }
+      ]
+    },
+    {
+      "target": "pkg/site.json",
+      "key": "sha256:e9bf7a4aa864000514120cff1bcae218741fe0cc50f4403206d69c6dfd69e2a2",
+      "tool": "index",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "pkg/bundle",
+          "output_fingerprint": "sha256:946f4819033c02d5fd514be37a9c2f251f2fbe4c81f7c9e5252d33dc13a7c597"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "pkg/site.json",
+          "fingerprint": "sha256:b4bf9207cf3dd0b24258beb427a4b76afe044c219556bb2d0d594dc69b52a1f3",
+          "size": 32
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "kind": "write",
+      "path": "src/pages/b.html",
+      "fingerprint": "sha256:236a20a3607f298964a159e83722acc18a0730373923281ec5b7d4193ae32fd7",
+      "size": 35
+    },
+    {
+      "kind": "write",
+      "path": "gen/theme.css",
+      "fingerprint": "sha256:d55bdcd972b2882e986ce3374eb017732676cff74d7c62c32c5acd3fdb06e7d4",
+      "size": 32
+    }
+  ]
+}

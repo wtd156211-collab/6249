@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "name": "args-change",
+  "targets": [
+    {
+      "name": "build/app.elf",
+      "tool": "linker",
+      "args": [
+        "-O2",
+        "--lto=on"
+      ],
+      "inputs": [
+        "src/main.c"
+      ],
+      "deps": [
+        "build/main.o"
+      ],
+      "outputs": [
+        "build/app.elf"
+      ]
+    },
+    {
+      "name": "build/main.o",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        "src/main.c"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/main.o"
+      ]
+    }
+  ]
+}

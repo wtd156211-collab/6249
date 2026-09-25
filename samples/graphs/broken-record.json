@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "broken-record",
+  "targets": [
+    {
+      "name": "build/badkey.out",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        "src/bad.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/badkey.out"
+      ]
+    },
+    {
+      "name": "build/nooutfp.out",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        "src/noout.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/nooutfp.out"
+      ]
+    },
+    {
+      "name": "build/liar.out",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        "src/liar.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/liar.out"
+      ]
+    },
+    {
+      "name": "build/ok.out",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        "src/ok.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/ok.out"
+      ]
+    },
+    {
+      "name": "build/downstream.out",
+      "tool": "pack",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        "build/badkey.out",
+        "build/liar.out",
+        "build/nooutfp.out"
+      ],
+      "outputs": [
+        "build/downstream.out"
+      ]
+    }
+  ]
+}

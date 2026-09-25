@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "dropped-target",
+  "targets": [
+    {
+      "name": "build/a.out",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        "src/a.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/a.out"
+      ]
+    },
+    {
+      "name": "build/b.out",
+      "tool": "link",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        "build/a.out"
+      ],
+      "outputs": [
+        "build/b.out"
+      ]
+    }
+  ]
+}

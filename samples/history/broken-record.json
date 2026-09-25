@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "build/badkey.out",
+      "key": "deadbeef",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        {
+          "path": "src/bad.in",
+          "fingerprint": "sha256:43fffb9ffd6031e32c3b919e1cf1012241f92013887cb8383ac09f20a33cbff1",
+          "size": 29
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/badkey.out",
+          "fingerprint": "sha256:337cee2be975401508a497566d8dd5358be3290738e0ca48d72f91880dd3dab9",
+          "size": 35
+        }
+      ]
+    },
+    {
+      "target": "build/downstream.out",
+      "key": "sha256:ddc2fb27e56ab7568820a90ee05a63d642d947c9e9c4800c09651f633414dcb2",
+      "tool": "pack",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/badkey.out",
+          "output_fingerprint": "sha256:e6dca1123fbff5fc1e897d7152446000690b4e246d5894e2d9e354c2cfdee3cd"
+        },
+        {
+          "target": "build/liar.out",
+          "output_fingerprint": "sha256:569d82bf168d2ecc47d530c76d24f360694bebbdb2f58235be47f4b78342751b"
+        },
+        {
+          "target": "build/nooutfp.out",
+          "output_fingerprint": "sha256:fc5955b508c6ec25748818c5d5968a5c0c4c4ba62fc40492fc355f34374dfb44"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/downstream.out",
+          "fingerprint": "sha256:1f9434f80224b2d88982e75ab10eedf534ff2a9fe65ce0efff4708ecae4d5efe",
+          "size": 39
+        }
+      ]
+    },
+    {
+      "target": "build/liar.out",
+      "key": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        {
+          "path": "src/liar.in",
+          "fingerprint": "sha256:48ffb1e962a74575a64e69af65a0176c2f1f403c008cdbecab5dca28da7c7145",
+          "size": 30
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/liar.out",
+          "fingerprint": "sha256:c5b654b26b11fc1c8f13654a70aaed60f8cc2d741b88bbe629372bbc46056c12",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "target": "build/nooutfp.out",
+      "key": "sha256:df64eccbcb79e513567219889c026f881455b6ac0ac31ea1d5537a9b8527e864",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        {
+          "path": "src/noout.in",
+          "fingerprint": "sha256:0587b25833e90dc242ec84762b54d1434d43d01e244ce3ab4c1eddc1659c6933",
+          "size": 31
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/nooutfp.out",
+          "fingerprint": "sha256:nothex",
+          "size": 36
+        }
+      ]
+    },
+    {
+      "target": "build/ok.out",
+      "key": "sha256:bf272a0b355080b76aa6f4a1cd737d4513cc6c36b21bdd86b87753cc4905058e",
+      "tool": "cc",
+      "args": [],
+      "inputs": [
+        {
+          "path": "src/ok.in",
+          "fingerprint": "sha256:69eea92c99b67120008c5284ec25d427cb49ebdb6e7193f8500a648036ed4a0f",
+          "size": 28
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/ok.out",
+          "fingerprint": "sha256:e00873020a5e9054ef3cb3241528e789203a258d35912ae82fb2a6359d88ebde",
+          "size": 31
+        }
+      ]
+    }
+  ],
+  "changes": []
+}

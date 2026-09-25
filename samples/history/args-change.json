@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "build/app.elf",
+      "key": "sha256:015f06cca96c7ef1db821b8bcdf75a7ca4e9f3415d03897698b790fa7b359181",
+      "tool": "linker",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/main.c",
+          "fingerprint": "sha256:abcb9d00b4c7838969c72758c96e107416155061aa5f98998cf54f1726650999",
+          "size": 29
+        }
+      ],
+      "deps": [
+        {
+          "target": "build/main.o",
+          "output_fingerprint": "sha256:df116d36711a2e061395c22db6645fcaebdd11b367450d52a12367ec3b7a3e13"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/app.elf",
+          "fingerprint": "sha256:f957a571dbf858f83b8d7932378e525153d0695869a2474838a04e3f43c59038",
+          "size": 32
+        }
+      ]
+    },
+    {
+      "target": "build/main.o",
+      "key": "sha256:7910cef67dba7b4a35af5399e778dd9ae5942e3342a170aae0f43202e457cef0",
+      "tool": "clang",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/main.c",
+          "fingerprint": "sha256:abcb9d00b4c7838969c72758c96e107416155061aa5f98998cf54f1726650999",
+          "size": 29
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/main.o",
+          "fingerprint": "sha256:a61cad402b0d612f43c506fe476cb058f11e4aa643e7d4e3f565d26076308db8",
+          "size": 31
+        }
+      ]
+    }
+  ],
+  "changes": []
+}

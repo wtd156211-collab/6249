@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "build/stage-01.out",
+      "key": "sha256:eabb0d6ed4cd5596a7082f0e5d5efde54eb07724abc094e2ee8cadd7564eb44d",
+      "tool": "stage",
+      "args": [
+        "--stage=1"
+      ],
+      "inputs": [
+        {
+          "path": "src/seed.txt",
+          "fingerprint": "sha256:7e818990ef4d6449d4c48d34f7ff5d046743650781abd626e2acdd76f28d9921",
+          "size": 31
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/stage-01.out",
+          "fingerprint": "sha256:e3b62712c19524ef34bf5b43c22b356620fa749798bd749c8d9fdf3adeb0c085",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-02.out",
+      "key": "sha256:c6f3a8fa3ad111a30405dd7de7813b4c1822bfc2d80d9c3e1c4937e565f1dabb",
+      "tool": "stage",
+      "args": [
+        "--stage=2"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-01.out",
+          "output_fingerprint": "sha256:0fa0a5bc9d4ad008b1bd5a86168d7df5e9b4c688ec30335dd98641a164a23284"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-02.out",
+          "fingerprint": "sha256:705f5765989ac38944237ef66e4aeb69f0abec3df93853469081f39322ed57ab",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-03.out",
+      "key": "sha256:01be7ba6536460b6f52dda06d217fcb2565e68eb394306293e724eb93629ea9a",
+      "tool": "stage",
+      "args": [
+        "--stage=3"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-02.out",
+          "output_fingerprint": "sha256:5f844081bcfb3af7dae19783918c41605f57cd9017e011a70fccea658f03c906"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-03.out",
+          "fingerprint": "sha256:7672e2e0d4fdb276e9379b353cbcddda886109bdaed1d707fbb8f5be9190cd18",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-04.out",
+      "key": "sha256:08624587056c292bd9990e90d3492776e3c008242408e54c5db80ba8bc3c1528",
+      "tool": "stage",
+      "args": [
+        "--stage=4"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-03.out",
+          "output_fingerprint": "sha256:e730814aaab9703be4f0557a38a04fed6fed135c3a73fd0c57033dc461d252c7"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-04.out",
+          "fingerprint": "sha256:70982867ddd9f515af1e253627ab9b360c9061a3ba83fbcb03ef5540b55cff07",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-05.out",
+      "key": "sha256:3655f3811452a43418ec038b50b0a2ba5c572d7018cab2f35ff7d0b9515a1b2e",
+      "tool": "stage",
+      "args": [
+        "--stage=5"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-04.out",
+          "output_fingerprint": "sha256:fe4b1be00993939d800420f227e6959b1d69fee92f247ac954a8de4a843f5b82"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-05.out",
+          "fingerprint": "sha256:3ccf77acc36fb03543f5a835e1535afcb9f75522691b527db3971ba818cea2be",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-06.out",
+      "key": "sha256:6e88f13f21b69d776e1e9e64dea449faa39e26ddca35fe1c38a2f88a66cd8150",
+      "tool": "stage",
+      "args": [
+        "--stage=6"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-05.out",
+          "output_fingerprint": "sha256:8a6de09b00131784ea3f231a7fdffa20cd2e9fd1d09ed6b4679c4c2f4cc9124c"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-06.out",
+          "fingerprint": "sha256:90c57566c90fa69aa94210797e9a66e3848db6a35da547054f6ba6ae16f62102",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-07.out",
+      "key": "sha256:3fff4c020382a9373d4e3a0fab01b08266a64e9880b1e10234e3015624813100",
+      "tool": "stage",
+      "args": [
+        "--stage=7"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-06.out",
+          "output_fingerprint": "sha256:e2e2d18f042f857fc088a9457e1902903fc770f82c3b435457e27af55b454d23"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-07.out",
+          "fingerprint": "sha256:06cd58ee51f0a0fec8d582cbbb1d4635e05448d10308a8213f84631c93cea66a",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-08.out",
+      "key": "sha256:560c0e3924c347117e10e04942338cdbea68013bdea5d3cf05c2a754405aa40c",
+      "tool": "stage",
+      "args": [
+        "--stage=8"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-07.out",
+          "output_fingerprint": "sha256:81d108e526d36b6b8fdb5a1ab7e9ea750f59600f8bb2a467f221ee7192409f35"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-08.out",
+          "fingerprint": "sha256:319923a0851415521e707884edf48d8a32100b1f3d18e5884412c5d907774275",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-09.out",
+      "key": "sha256:d551b5bbf3d579402cdfd53529bd612e49499f5b2fb503e42c0a730a5a3cc61d",
+      "tool": "stage",
+      "args": [
+        "--stage=9"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-08.out",
+          "output_fingerprint": "sha256:31132f8b4e4873a952827add1bb1751ee88f03a133dc19709774a84fc22cf66d"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-09.out",
+          "fingerprint": "sha256:8be7bac5dfe3218706d84e35dc2251f83b90c4524590da09cd64cd8b1a1f6112",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-10.out",
+      "key": "sha256:4b40d86d0ce5ff385e2f3918d9221fee41b7d1378f361efa5729cc48b9364420",
+      "tool": "stage",
+      "args": [
+        "--stage=10"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-09.out",
+          "output_fingerprint": "sha256:2f00ddc40e79735d89c8a59164821705cc4fe8e30a2c3b0fbcb695c829c6a80a"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-10.out",
+          "fingerprint": "sha256:a5be527f9d91e82c72f952f89cc7336929848ec3c2a46214066845730ca61bb0",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-11.out",
+      "key": "sha256:7eea98bb0eb1ad95af234121afa1f961402e8491eed536f447c73e88b0305519",
+      "tool": "stage",
+      "args": [
+        "--stage=11"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-10.out",
+          "output_fingerprint": "sha256:fe8f3f8378768320fa8cbe811313951e78f925b84d548bac479bb7561bf57d7a"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-11.out",
+          "fingerprint": "sha256:6533bd49438016f00effdbb213ca8fbafecc52c2d459d6ac85b005e730542cdb",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "target": "build/stage-12.out",
+      "key": "sha256:6ad14eedde88a63f8e7ef80d38ae0f502eced09606147bcf051707f36f702379",
+      "tool": "stage",
+      "args": [
+        "--stage=12"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/stage-11.out",
+          "output_fingerprint": "sha256:1e929a8d4cf3ca1c263e25dd7391506578637bf95ccb187a08d8646ae31f7964"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/stage-12.out",
+          "fingerprint": "sha256:4a31fe684620a79d4f5edcea01c5deb3a20a6942537cffb82f6b5057a8cda125",
+          "size": 37
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "kind": "write",
+      "path": "src/seed.txt",
+      "fingerprint": "sha256:284d1d8288c35f482ceebe036fdc6056deecec6fd733b9f9463cc64dc0b0299b",
+      "size": 31
+    }
+  ]
+}

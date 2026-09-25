@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "diamond",
+  "targets": [
+    {
+      "name": "build/core.a",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        "src/core.c"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/core.a"
+      ]
+    },
+    {
+      "name": "build/left.b",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        "src/left.c"
+      ],
+      "deps": [
+        "build/core.a"
+      ],
+      "outputs": [
+        "build/left.b"
+      ]
+    },
+    {
+      "name": "build/right.c",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        "src/right.c"
+      ],
+      "deps": [
+        "build/core.a"
+      ],
+      "outputs": [
+        "build/right.c"
+      ]
+    },
+    {
+      "name": "app/final.bin",
+      "tool": "link",
+      "args": [
+        "-o",
+        "app/final.bin"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/left.b",
+        "build/right.c"
+      ],
+      "outputs": [
+        "app/final.bin"
+      ]
+    }
+  ]
+}

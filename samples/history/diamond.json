@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "app/final.bin",
+      "key": "sha256:50358d5d8b940d165bf06243e2fdf1347f9a6320a5049e8f38ee162d8378100e",
+      "tool": "link",
+      "args": [
+        "-o",
+        "app/final.bin"
+      ],
+      "inputs": [],
+      "deps": [
+        {
+          "target": "build/left.b",
+          "output_fingerprint": "sha256:4fc052d5f30047acbf73f9351dcb5f9657b8c854b2fcbe730e3f80d9eed9f393"
+        },
+        {
+          "target": "build/right.c",
+          "output_fingerprint": "sha256:5a59dc5a2c92439b4af8ec1afc49a568bedb0f2022831d0731a8111051914f59"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "app/final.bin",
+          "fingerprint": "sha256:db38ffc3c515807f987e1352881cef8fa8c781d873a11a37bc8677436a0b90e3",
+          "size": 32
+        }
+      ]
+    },
+    {
+      "target": "build/core.a",
+      "key": "sha256:6d48760b6df30b03d15c5047719c44817adb0302960fbaed9ae13bf4d5015adc",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/core.c",
+          "fingerprint": "sha256:9d3e4f328d72ead9f0e59268961b7960a7f77db89760c5565c9abc3ce45cc427",
+          "size": 29
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/core.a",
+          "fingerprint": "sha256:382d139c15b6f0e899c6727ac41fbbb78754c74d07dd43ffecbc944cfb38a241",
+          "size": 31
+        }
+      ]
+    },
+    {
+      "target": "build/left.b",
+      "key": "sha256:a40850b2f27626fa5c16449814c30c14dd1a93e9f2c5d0537591347fe76747b5",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/left.c",
+          "fingerprint": "sha256:9ad416961240e5579cb463e77d56934eeaf23707d299ddbacd39ec78940d44d0",
+          "size": 29
+        }
+      ],
+      "deps": [
+        {
+          "target": "build/core.a",
+          "output_fingerprint": "sha256:4ee65eba4ae68ba95f83e26c18cab001112ac3acaab3df1ae3f25dfc16da98e2"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/left.b",
+          "fingerprint": "sha256:0cf03cf37806e1c3469802bf0a782235c226eb2812666df2e760776082b8d610",
+          "size": 31
+        }
+      ]
+    },
+    {
+      "target": "build/right.c",
+      "key": "sha256:57f9eac4eac377d2c2187c6535de4d9968a69af4e8d19e759f32a94539a581d6",
+      "tool": "cc",
+      "args": [
+        "-O2"
+      ],
+      "inputs": [
+        {
+          "path": "src/right.c",
+          "fingerprint": "sha256:8bc6fc7a9282db43c4f2c6961c23c103e12618e0180a2e469253586bded1eb0a",
+          "size": 30
+        }
+      ],
+      "deps": [
+        {
+          "target": "build/core.a",
+          "output_fingerprint": "sha256:4ee65eba4ae68ba95f83e26c18cab001112ac3acaab3df1ae3f25dfc16da98e2"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/right.c",
+          "fingerprint": "sha256:320d70b44ef3d9480ad7498f39b8d09e21048412eb2cb908ebf647da910ecad1",
+          "size": 32
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "kind": "write",
+      "path": "src/left.c",
+      "fingerprint": "sha256:23837366305f2d3bdf1ebc00c51d35070056bcaf236eb56eb433cb5b9914a04e",
+      "size": 29
+    }
+  ]
+}

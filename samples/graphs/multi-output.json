@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "name": "multi-output",
+  "targets": [
+    {
+      "name": "docs/index.html",
+      "tool": "render",
+      "args": [
+        "--out=docs"
+      ],
+      "inputs": [
+        "src/pages/a.html"
+      ],
+      "deps": [],
+      "outputs": [
+        "docs/index.html"
+      ]
+    },
+    {
+      "name": "gen/theme.css",
+      "tool": "sass",
+      "args": [
+        "--style=min"
+      ],
+      "inputs": [
+        "src/theme.css"
+      ],
+      "deps": [],
+      "outputs": [
+        "gen/theme.css"
+      ]
+    },
+    {
+      "name": "gen/page.html",
+      "tool": "render",
+      "args": [
+        "--out=gen"
+      ],
+      "inputs": [],
+      "deps": [
+        "gen/theme.css"
+      ],
+      "outputs": [
+        "gen/page.html"
+      ]
+    },
+    {
+      "name": "pkg/bundle",
+      "tool": "pack",
+      "args": [
+        "--mode=site"
+      ],
+      "inputs": [
+        "src/pages/a.html",
+        "src/pages/b.html"
+      ],
+      "deps": [],
+      "outputs": [
+        "pkg/bundle.a.html",
+        "pkg/bundle.b.html"
+      ]
+    },
+    {
+      "name": "pkg/site.json",
+      "tool": "index",
+      "args": [],
+      "inputs": [],
+      "deps": [
+        "pkg/bundle"
+      ],
+      "outputs": [
+        "pkg/site.json"
+      ]
+    }
+  ]
+}

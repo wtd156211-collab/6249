@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "name": "deep-chain",
+  "targets": [
+    {
+      "name": "build/stage-01.out",
+      "tool": "stage",
+      "args": [
+        "--stage=1"
+      ],
+      "inputs": [
+        "src/seed.txt"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/stage-01.out"
+      ]
+    },
+    {
+      "name": "build/stage-02.out",
+      "tool": "stage",
+      "args": [
+        "--stage=2"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-01.out"
+      ],
+      "outputs": [
+        "build/stage-02.out"
+      ]
+    },
+    {
+      "name": "build/stage-03.out",
+      "tool": "stage",
+      "args": [
+        "--stage=3"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-02.out"
+      ],
+      "outputs": [
+        "build/stage-03.out"
+      ]
+    },
+    {
+      "name": "build/stage-04.out",
+      "tool": "stage",
+      "args": [
+        "--stage=4"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-03.out"
+      ],
+      "outputs": [
+        "build/stage-04.out"
+      ]
+    },
+    {
+      "name": "build/stage-05.out",
+      "tool": "stage",
+      "args": [
+        "--stage=5"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-04.out"
+      ],
+      "outputs": [
+        "build/stage-05.out"
+      ]
+    },
+    {
+      "name": "build/stage-06.out",
+      "tool": "stage",
+      "args": [
+        "--stage=6"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-05.out"
+      ],
+      "outputs": [
+        "build/stage-06.out"
+      ]
+    },
+    {
+      "name": "build/stage-07.out",
+      "tool": "stage",
+      "args": [
+        "--stage=7"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-06.out"
+      ],
+      "outputs": [
+        "build/stage-07.out"
+      ]
+    },
+    {
+      "name": "build/stage-08.out",
+      "tool": "stage",
+      "args": [
+        "--stage=8"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-07.out"
+      ],
+      "outputs": [
+        "build/stage-08.out"
+      ]
+    },
+    {
+      "name": "build/stage-09.out",
+      "tool": "stage",
+      "args": [
+        "--stage=9"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-08.out"
+      ],
+      "outputs": [
+        "build/stage-09.out"
+      ]
+    },
+    {
+      "name": "build/stage-10.out",
+      "tool": "stage",
+      "args": [
+        "--stage=10"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-09.out"
+      ],
+      "outputs": [
+        "build/stage-10.out"
+      ]
+    },
+    {
+      "name": "build/stage-11.out",
+      "tool": "stage",
+      "args": [
+        "--stage=11"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-10.out"
+      ],
+      "outputs": [
+        "build/stage-11.out"
+      ]
+    },
+    {
+      "name": "build/stage-12.out",
+      "tool": "stage",
+      "args": [
+        "--stage=12"
+      ],
+      "inputs": [],
+      "deps": [
+        "build/stage-11.out"
+      ],
+      "outputs": [
+        "build/stage-12.out"
+      ]
+    }
+  ]
+}

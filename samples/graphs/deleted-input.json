@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "deleted-input",
+  "targets": [
+    {
+      "name": "build/frag.out",
+      "tool": "pack",
+      "args": [
+        "--frag"
+      ],
+      "inputs": [
+        "src/frag.in"
+      ],
+      "deps": [],
+      "outputs": [
+        "build/frag.out"
+      ]
+    },
+    {
+      "name": "build/page.out",
+      "tool": "render",
+      "args": [],
+      "inputs": [
+        "src/style.in"
+      ],
+      "deps": [
+        "build/frag.out"
+      ],
+      "outputs": [
+        "build/page.out"
+      ]
+    }
+  ]
+}

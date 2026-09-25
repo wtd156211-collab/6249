@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "target": "build/frag.out",
+      "key": "sha256:3538cb5769255366c6d5d39abc5b6641620d7c1576ef4d76481bd83304ac772d",
+      "tool": "pack",
+      "args": [
+        "--frag"
+      ],
+      "inputs": [
+        {
+          "path": "src/frag.in",
+          "fingerprint": "sha256:97a5b8bf519f316d3361394ed983c28089c2592cd3d7bb6a2b00084a974f5f5c",
+          "size": 30
+        }
+      ],
+      "deps": [],
+      "outputs": [
+        {
+          "path": "build/frag.out",
+          "fingerprint": "sha256:3a6d44f8947daf4d9480cba0ecddbd4fcaea815a3ec6acd0181d937ae10595f1",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "target": "build/page.out",
+      "key": "sha256:a7a151e0e6eab33517a865e7c1ae6c15249661293197ae0b760f33bcfb1764ac",
+      "tool": "render",
+      "args": [],
+      "inputs": [
+        {
+          "path": "src/style.in",
+          "fingerprint": "sha256:be012f280a341db31dce35031ab84cd772dad7b1453d6e7242f851d6f21a703b",
+          "size": 31
+        }
+      ],
+      "deps": [
+        {
+          "target": "build/frag.out",
+          "output_fingerprint": "sha256:e16a3d92cc6d2dc984cb1b349b5eba6422a4975bd2c65609b0748eb4f8fe2cd2"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/page.out",
+          "fingerprint": "sha256:75fcffbdc02dbd696bed71483cac24ccd8d33c1567b69ee84b73ac4b89d58e58",
+          "size": 33
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "kind": "delete",
+      "path": "src/frag.in"
+    }
+  ]
+}
